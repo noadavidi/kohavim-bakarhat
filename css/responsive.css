@@ -1,0 +1,154 @@
+/* XS SIZE */
+@media screen and (max-width:768px) {
+
+	.navbar .container {
+		width:100%;		
+	}
+	
+	.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+		position:relative;
+		top: -9px;
+		right:0;
+	}
+		
+	#override .navbar-brand img{
+		width:100px;
+	}
+	
+	#override .navbar-brand{
+		background: #fff;
+		border-radius:3px;
+		width:110px;
+		height:auto;
+		position:fixed;
+		z-index:99;
+		top:3px;
+		right:15px;
+		padding:5px;
+		padding-top:7px;
+		padding-left:10px;
+	}
+	
+	.map_box{
+		display:none;
+	}
+
+	.koteret_r {
+    font-size: 36px;
+	font-weight:600;
+	}
+	
+	#backTop{
+		display:none;
+	}
+}
+
+
+
+/* SM SIZE */
+@media screen and (min-width:768px) and (max-width:992px) {
+
+		
+	/* index article boxes */
+	#link-boxes .col-md-12 {
+		min-height: 300px;
+		padding-bottom:30px;
+		position:relative;
+	}
+
+	.box {
+		margin-bottom:20px;
+	}
+	
+	#link-boxes h2 {
+    font-size: 30px;
+	}
+	
+	#link-boxes p {
+    color: #171717;
+    font-size: 16px;
+	}
+	
+	.list-features-header h2 {
+    font-size: 2em;
+	}
+	
+	#list-features p {
+    font-size: 13px;
+    margin-top: -3px;
+	}
+	
+	.headline_number {
+    font-size: 17px;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+	}
+	
+	.koteret_r {
+    font-size: 76px;
+	
+	}
+}
+
+
+
+/* MD SIZE */
+@media screen and (min-width:992px) {
+	
+	/* index article boxes */
+	#link-boxes .col-md-12 {
+		min-height: 320px;
+		padding-bottom:20px;
+		position:relative;
+		margin-top: -2px;
+	}
+
+	.koteret_r{
+		font-size: 72px;
+		font-weight: 600;
+	}
+}
+
+
+
+
+/* LG SIZE */
+@media screen and (min-width:1200px) {
+	
+	#link-boxes h2 {
+    font-size: 38px;
+	}
+	
+	#link-boxes p {
+    color: #472340;
+    font-size: 17px;
+	    padding-top: 10px;
+	}
+	
+	.list-features-header h2 {
+    font-size: 2.5em;
+	}
+	
+	#list-features p {
+    font-size: 16px;
+    margin-top: -3px;
+	}
+	
+	.headline_number {
+    font-size: 21px;
+    color: #272727;
+    margin-top: 12px;
+	margin-right:0;
+	margin-bottom: 15px;
+	}
+	
+	.koteret_r {
+    font-size: 84px;
+    line-height: 10px;
+    font-weight: 500;
+    margin-bottom: 54px;
+    color: #fff;
+	font-weight: 600;
+	}
+}	

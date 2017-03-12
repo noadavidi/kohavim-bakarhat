@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>כוכבים בקרחת</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+	
+	<!-- your style -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	
+	<!-- plugins style -->
+    <link rel="stylesheet" href="css/animate.css">
+	<link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+		
+		
+		<!-- If you'd like to support IE8 -->
+        <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+	
+<!-- scripts here -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/shrinkHeader.js"></script>
+    <script src="js/wow.min.js"></script>
+
+     	<!--FORUM Data & style -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+		<script type="text/javascript" src="data/comments-data.js"></script>   
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+
+	
+		<!-- forum script -->
+	<script type="text/javascript" src="js/jquery-comments.js"></script>
+<!-- Init jquery-comments -->
+		<script type="text/javascript">
+			$(function() {
+				var saveComment = function(data) {
+
+					// Convert pings to human readable format
+					$(data.pings).each(function(index, id) {
+						var user = usersArray.filter(function(user){return user.id == id})[0];
+						data.content = data.content.replace('@' + id, '@' + user.fullname);
+					});
+
+					return data;
+				}
+				$('#comments-container').comments({
+					profilePictureURL: 'https://viima-app.s3.amazonaws.com/media/user_profiles/user-icon.png',
+					currentUserId: 1,
+					roundProfilePictures: true,
+					textareaRows: 1,
+					enableAttachments: true,
+					enableHashtags: true,
+					enablePinging: true,
+					getUsers: function(success, error) {
+						setTimeout(function() {
+							success(usersArray);
+						}, 500);
+					},
+					getComments: function(success, error) {
+						setTimeout(function() {
+							success(commentsArray);
+						}, 500);
+					},
+					postComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					putComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					deleteComment: function(data, success, error) {
+						setTimeout(function() {
+							success();
+						}, 500);
+					},
+					upvoteComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					uploadAttachments: function(dataArray, success, error) {
+						setTimeout(function() {
+							success(dataArray);
+						}, 500);
+					},
+				});
+			});
+		</script>
+</head>
+
+<body id="override">
+    <header id="top">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img width="100" src="img/logo.png">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">הבית <span class="sr-only">(current)</span></a></li>
+                        <li><a href="what.html">על קצה הקרחת</a></li>
+                        <li><a href="timeline.html">שלבי ההתקרחות</a></li>
+                        <li class="active"><a href="forum.html">פורום</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    
+	<section>
+		<div class="row hesber">
+			<div class="col-md-12 melel">
+				
+				<h2>זה הרגע הינה באה השעה</h2>
+					
+				<h3>המקום והזמן לפרוק כל מה שעליכם</h3> <br>
+				<p>
+					כאן תוכלו להביע את דעותכם בנושא הקרחת, מתן הסברים, עצות וייעוצים, <br>
+					תקבלו מענה על שאלות לא מובנות, נושאים באתר שהייתם רוצים להוסיף/לשנות <br>
+					פורום זה נותן לכם להביע את הרגשותכם, לספר לנו את סיפוריכם ולהעזר בנו ככל שניתן <br>
+					חשוב לציין שכל המידע שמצוי באתר אמין וכנה 
+					
+				</p>
+			</div>
+		</div>
+	</section>
+	<div class="container-fluid">
+		<section id="forum">
+			<div id="comments-container"></div>
+		</section>
+	</div>
+	<hr>
+	<section>
+		<div class="container">
+			<div class="row col-md-12 bottun_footer">
+				<h3 class="footer_koteret">דברו איתנו בעוד אמצעיים</h3></div>
+			</div>
+		<div class="col-md-12 allpic">
+					<a href="#"><img src="img/social.png" style="width: 40px;"></a>		
+					<a href="#"><img src="img/silhouette.png" style="width: 40px;"></a>
+					<a href="#"><img src="img/video.png" style="width: 40px;"></a>
+					<a href="#"><img src="img/internet.png" style="width: 40px;"></a>
+					<a href="#"><img src="img/application.png" style="width: 40px;"></a>
+		</div>
+	</section>	
+	<div id="backTop"><a class="link_top" href="#top"><img src="img/Arrow-icon.png"></a></div>
+
+
+    <script>
+        new WOW().init();
+        $.stellar();
+
+    </script>
+</body>
+
+</html>
