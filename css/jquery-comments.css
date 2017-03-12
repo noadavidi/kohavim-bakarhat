@@ -11,7 +11,7 @@ http://viima.github.io/jquery-comments/*/
 }
 
 .jquery-comments a[href] {
-	color: #2793e6;
+	color: #fcc33d;
 	text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ http://viima.github.io/jquery-comments/*/
 }
 
 .jquery-comments .profile-picture {
-	float: left;
+	float: right;
 	width: 3.6rem;
 	height: 3.6rem;
 	max-width: 50px;
